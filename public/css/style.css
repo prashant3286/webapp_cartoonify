@@ -1,0 +1,69 @@
+/* unvisited link */
+a.cartoonify {
+    color: white;
+    font-size: big;
+    text-align:center;
+    padding:30px;
+    margin-top:10px;
+    float: left;
+    font-weight:bold;
+    text-decoration: underline;
+}
+a.history {
+    color: white;
+    font-size: big;
+    text-align:center;
+    padding:30px;
+    margin-top:10px;
+    float: right;
+    font-weight:bold;
+    text-decoration: underline;
+}
+
+#main-img {
+    display: flex;
+    justify-content: center;
+}
+
+#main-img img {
+    margin: 1rem;
+}
+figure {
+    float: right;
+    width: 30%;
+    text-align: center;
+    font-style: bold;
+    font-size: medium;
+    text-indent: 0;
+    border: thin black solid;
+    margin: 0.2em;
+    padding: 0.5em;
+  }
+
+#mybutton{
+        margin: 0;
+        position: absolute;
+        top: 30%;
+        left: 46%;
+}
+#cartoon{
+    text-align: center;
+    text-decoration: crimson;
+    padding: 10px ;
+    border: 1px solid green ;
+}
+
+.slidecontainer{
+    text-align: left;
+}
+
+#input-files{
+    padding:5 550px;
+}
+
+
+
+
+
+
+

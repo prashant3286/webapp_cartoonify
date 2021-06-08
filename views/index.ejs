@@ -1,0 +1,71 @@
+<html lang="en">
+  <head>
+    <link rel='stylesheet' href='/css/style.css' />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>cartoonify images</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  </head>
+  <body style="background-color:coral;">
+    
+     
+      <div>
+        <a class="cartoonify" href="/"><span>CARTOONIFY</span></a>
+        <a class="history" href="/result"><span> HISTORY</span></a>
+      </div><br>
+      <div id="cartoon">
+          <h1>Cartoonify Web App</h1>
+      </div><br>
+
+       <div>
+            <form action="/cartoonify" method="POST" enctype="multipart/form-data"> 
+              <input
+               type="file"
+                name="Image"
+                id="input-files">
+
+                <div class="slidecontainer">
+                  <h4>Median Blur value:</h2>
+                  <input name="medianblurval" type="range" min="1" max="100" class="slider" id="myRange">
+                  <p><span id="demo"></span></p>
+
+                </div> 
+              
+              <button id="mybutton" type="submit" class="btn btn-primary">Cartoonify</button>
+            </form>
+
+        </div>  
+          
+     
+  <div>
+
+    <div id="main-img"> 
+    <figure><img src="<%= typeof file !='undefined' ? file : '' %>" class="responsive-img" onload="loadImage()" alt="Input Image" width="300px" height="300px" ><figcaption>Original Image</figcaption></figure>
+    <figure><img src="<%= typeof CartoonifyImage != 'undefined' ? CartoonifyImage : '' %>" onload="loadImage()" alt= "Cartoonify Image" class="Cartoonify-image" width="300px" height="300px"><figcaption>Cartoonify Image</figcaption></figure>    
+    </div>
+   
+  </div> 
+  
+  <script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+  
+  <script>
+    $('#main-img').hide()
+    
+    function loadImage() {
+      $('#main-img').show()
+    }
+    var slider = document.getElementById("myRange");
+    var output = document.getElementById("demo");
+    output.innerHTML = slider.value;
+
+    slider.oninput = function() {
+      output.innerHTML = this.value;
+    }
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+Python=3.8.5
+Numpy
+opencv2
+Nodejs
+Express
+Mongodb
+mongoose
+ejs
+multer
+path
